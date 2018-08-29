@@ -4,8 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "db402b907a9d504e154cf379ef915d07",
+    "content-hash": "cdd14cea87d0033209c1de7c5b5dbb9f",
     "packages": [
+        {
+            "name": "league/di",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/di.git",
+                "reference": "ad0259589949f12abeae6c1e918a0ff7ef00b00a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/di/zipball/ad0259589949f12abeae6c1e918a0ff7ef00b00a",
+                "reference": "ad0259589949f12abeae6c1e918a0ff7ef00b00a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "league/phpunit-coverage-listener": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "League\\Di\\": [
+                        "src/",
+                        "test/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Don Gilbert",
+                    "email": "don@dongilbert.net",
+                    "homepage": "http://dongilbert.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Fast Dependency Injection Container for PHP 5.3+",
+            "homepage": "https://github.com/php-loep/di",
+            "keywords": [
+                "dependency injection",
+                "dic",
+                "ioc"
+            ],
+            "abandoned": "orno/di",
+            "time": "2013-08-04T22:55:53+00:00"
+        },
         {
             "name": "phroute/phroute",
             "version": "v2.1.0",
