@@ -8,6 +8,8 @@ class TestHandler implements TestHandlerInterface
 {
     public function hello()
     {
-        return 'hello world';
+        $response = new \stdClass();
+        $response->text = 'hello world';
+        return $response;
     }
 }

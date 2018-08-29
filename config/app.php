@@ -24,5 +24,6 @@ $dispatcher = new Phroute\Phroute\Dispatcher($app->router->getData(), $resolver)
 
 $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
+header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
 echo json_encode($response);
