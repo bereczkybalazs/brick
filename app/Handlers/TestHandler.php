@@ -1,10 +1,10 @@
 <?php
 
-
 namespace App\Handlers;
 
+use App\Contracts\Handlers\TestHandlerInterface;
 
-class TestHandler
+class TestHandler implements TestHandlerInterface
 {
     public function hello()
     {

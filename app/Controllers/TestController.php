@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-use App\Handlers\TestHandler;
+use App\Contracts\Handlers\TestHandlerInterface;
 
 class TestController
 {
     private $testHandler;
 
-    public function __construct(TestHandler $testHandler)
+    public function __construct(TestHandlerInterface $testHandler)
     {
         $this->testHandler = $testHandler;
     }
