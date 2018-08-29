@@ -1,31 +1,31 @@
 <?php
 
-namespace App;
+namespace App\Core;
 
 use League\Di\Container;
 
 class InterfaceBinder
 {
 
-    public static function bindInterfaces(Container &$container)
+    public function bindInterfaces(Container &$container)
     {
         $interfaces = get_declared_interfaces();
         foreach ($interfaces as $interface) {
-            if (self::isAppInterface($interface)) {
+            if ($this->isAppInterface($interface)) {
                 $container->bind(
                     $interface,
-                    self::getBindingName($interface)
+                    $this->getBindingName($interface)
                 );
             }
         }
     }
 
-    private static function isAppInterface($interface)
+    private function isAppInterface($interface)
     {
         return strpos($interface, 'App\\Contracts') !== false;
     }
 
-    private static function getBindingName($interface)
+    private function getBindingName($interface)
     {
         $interface = str_replace('\\Contracts', '', $interface);
         $interface = str_replace('Interface', '', $interface);

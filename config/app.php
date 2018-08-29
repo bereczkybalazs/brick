@@ -4,10 +4,10 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR .'helpers.php');
 
 require_all(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'app');
 
-use App\App;
+use App\Core\App;
 use Phroute\Phroute\RouteCollector;
-use App\RouterResolver;
-use App\InterfaceBinder;
+use App\Core\RouterResolver;
+use App\Core\InterfaceBinder;
 use League\Di\Container;
 
 $app = new App(
