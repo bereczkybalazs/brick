@@ -6,8 +6,8 @@ abstract class BaseRepository
 {
     protected $model;
 
-    public function __construct(Connection $connection)
+    public function __construct()
     {
-        $this->model = $connection->make();
+        $this->model = Connection::getInstance();
     }
 }
