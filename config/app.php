@@ -9,12 +9,16 @@ use Phroute\Phroute\RouteCollector;
 use App\Core\RouterResolver;
 use App\Core\InterfaceBinder;
 use League\Di\Container;
+use Symfony\Component\Dotenv\Dotenv;
 
 $app = new App(
     new RouteCollector(),
     new Container(),
     new InterfaceBinder()
 );
+
+$env = new Dotenv();
+$env->load(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '.env');
 
 require_once(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php');
 
