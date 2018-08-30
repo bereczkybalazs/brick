@@ -4,7 +4,7 @@ namespace App\Core;
 
 use PDO;
 
-class Connection
+final class Connection
 {
     static private $connection;
 
