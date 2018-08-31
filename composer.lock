@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa9d847583f1e29120ce03123f0ae035",
+    "content-hash": "60613b342e3536309daa261b0f760df2",
     "packages": [
         {
             "name": "bereczkybalazs/brick-core",
-            "version": "0.0.2",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bereczkybalazs/brick-core.git",
-                "reference": "c1dda4b39fcc118b484c40b2b37853ee8aa3d096"
+                "reference": "7f98739c8117827fc0edd8d1a7d1424f5bf56d6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/c1dda4b39fcc118b484c40b2b37853ee8aa3d096",
-                "reference": "c1dda4b39fcc118b484c40b2b37853ee8aa3d096",
+                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/7f98739c8117827fc0edd8d1a7d1424f5bf56d6d",
+                "reference": "7f98739c8117827fc0edd8d1a7d1424f5bf56d6d",
                 "shasum": ""
             },
             "require": {
@@ -42,11 +42,11 @@
                     "email": "bereczkybalazs1@gmail.com"
                 }
             ],
-            "time": "2018-08-31T14:40:34+00:00"
+            "time": "2018-08-31T16:18:41+00:00"
         },
         {
             "name": "curl/curl",
-            "version": "dev-master",
+            "version": "1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mod/curl.git",
@@ -425,9 +425,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "curl/curl": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
