@@ -2,6 +2,7 @@
     "require": {
         "phroute/phroute": "^2.1",
         "league/di": ">=1.1",
-        "symfony/dotenv": "^3.3"
+        "symfony/dotenv": "^3.3",
+        "progsmile/request-validator": "^1.1"
     }
 }
