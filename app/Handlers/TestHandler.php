@@ -17,8 +17,8 @@ class TestHandler implements TestHandlerInterface
 
     public function hello()
     {
-        $this->curl->setHeader('API_KEY', $_ENV['USERS_API_KEY']);
-        $this->curl->get('http://users.velopene.site/');
-        return json_decode($this->curl->response);
+        $response = new \stdClass();
+        $response->message = 'hello world';
+        return $response;
     }
 }

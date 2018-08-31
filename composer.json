@@ -1,10 +1,10 @@
 {
     "name": "bereczkybalazs/brick",
     "type": "project",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "require": {
-        "bereczkybalazs/brick-core": "^0.1.0",
-        "curl/curl": "dev-master"
+        "bereczkybalazs/brick-core": "0.1.*",
+        "curl/curl": "^1.5"
     },
     "license": "MIT",
     "authors": [
