@@ -12,9 +12,19 @@ class Request
         $this->variables = $variables;
     }
 
+    protected function authenticate()
+    {
+        return true;
+    }
+
     public function validate()
     {
-        echo json_encode($this->rules);
+        $error = new \stdClass();
+        if(!$this->authenticate()) {
+            $error->code = 401;
+            $error->message = "Unauthorized request";
+            $this->makeError($error);
+        }
     }
 
     public function get($name)
@@ -25,5 +35,12 @@ class Request
     public function all()
     {
         return $this->variables;
+    }
+
+    protected function makeError($error)
+    {
+        header('Content-Type: application/json');
+        echo json_encode($error);
+        exit;
     }
 }
