@@ -3,7 +3,6 @@
 namespace App\Handlers;
 
 use App\Contracts\Handlers\TestHandlerInterface;
-use App\Contracts\Repositories\TestRepositoryInterface;
 
 class TestHandler implements TestHandlerInterface
 {

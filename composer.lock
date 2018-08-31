@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "54bc2eef5fe69e75de49df1e1e2efcfd",
+    "content-hash": "5ec0a4b3c7c5f7de2a6e8c9ae0132f3b",
     "packages": [
         {
             "name": "bereczkybalazs/brick-core",
-            "version": "0.0.1",
+            "version": "0.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bereczkybalazs/BrickCore.git",
-                "reference": "8cc307b348176058eda13bee75141316c6c5e61f"
+                "url": "https://github.com/bereczkybalazs/brick-core.git",
+                "reference": "c1dda4b39fcc118b484c40b2b37853ee8aa3d096"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bereczkybalazs/BrickCore/zipball/8cc307b348176058eda13bee75141316c6c5e61f",
-                "reference": "8cc307b348176058eda13bee75141316c6c5e61f",
+                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/c1dda4b39fcc118b484c40b2b37853ee8aa3d096",
+                "reference": "c1dda4b39fcc118b484c40b2b37853ee8aa3d096",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
                     "email": "bereczkybalazs1@gmail.com"
                 }
             ],
-            "time": "2018-08-31T12:42:14+00:00"
+            "time": "2018-08-31T14:40:34+00:00"
         },
         {
             "name": "league/di",

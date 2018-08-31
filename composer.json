@@ -1,9 +1,9 @@
 {
     "name": "bereczkybalazs/brick",
     "type": "project",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "require": {
-        "bereczkybalazs/brick-core": "^0.0.1"
+        "bereczkybalazs/brick-core": "^0.0.2"
     },
     "license": "MIT",
     "authors": [
