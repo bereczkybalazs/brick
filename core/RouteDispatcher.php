@@ -59,9 +59,11 @@ class RouteDispatcher
         $resolvedHandler = $this->handlerResolver->resolve($handler);
         $vars['request'] = $this->getRequest();
         $reflection = new ReflectionMethod($resolvedHandler[0], $resolvedHandler[1]);
+        $reflectionVariables = $this->getReflectionVars($reflection, $vars);
+        $this->validateRequest($reflectionVariables);
         $response = call_user_func_array(
             $resolvedHandler,
-            $this->getReflectionVars($reflection, $vars)
+            $reflectionVariables
         );
 
         return $this->dispatchFilters($afterFilter, $response);
@@ -72,6 +74,15 @@ class RouteDispatcher
         parse_str(file_get_contents('php://input'), $request);
         $request = array_merge_recursive($request, $_GET);
         return toObject($request);
+    }
+
+    private function validateRequest($reflectionVariables)
+    {
+        foreach ($reflectionVariables as $reflectionVariable) {
+            if ($reflectionVariable instanceof Request) {
+                $reflectionVariable->validate();
+            }
+        }
     }
 
     private function getReflectionVars(ReflectionMethod $reflection, $vars)
