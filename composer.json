@@ -1,7 +1,7 @@
 {
     "name": "bereczkybalazs/brick",
     "type": "project",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "require": {
         "bereczkybalazs/brick-core": "^0.0.1"
     },

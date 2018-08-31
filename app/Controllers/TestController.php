@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Contracts\Handlers\TestHandlerInterface;
-use BereczkyBalazs\BrickCore\Request;
 
 class TestController
 {
@@ -14,7 +13,7 @@ class TestController
         $this->testHandler = $testHandler;
     }
 
-    public function index($id, Request $request)
+    public function index()
     {
         return $this->testHandler->hello();
     }
