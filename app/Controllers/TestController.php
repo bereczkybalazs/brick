@@ -13,7 +13,7 @@ class TestController
         $this->testHandler = $testHandler;
     }
 
-    public function index()
+    public function index($id, $request)
     {
         return $this->testHandler->hello();
     }

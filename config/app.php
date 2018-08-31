@@ -25,7 +25,7 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'route
 
 $app->bindInterfaces();
 $resolver = new RouterResolver($app->container);
-$dispatcher = new Phroute\Phroute\Dispatcher($app->router->getData(), $resolver);
+$dispatcher = new \Core\RouteDispatcher($app->router->getData(), $resolver);
 
 $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
