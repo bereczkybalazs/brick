@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "bereczkybalazs/brick-core",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bereczkybalazs/brick-core.git",
-                "reference": "7f98739c8117827fc0edd8d1a7d1424f5bf56d6d"
+                "reference": "cfb2b588bc7e7dd80fce41436348acac45e3a4ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/7f98739c8117827fc0edd8d1a7d1424f5bf56d6d",
-                "reference": "7f98739c8117827fc0edd8d1a7d1424f5bf56d6d",
+                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/cfb2b588bc7e7dd80fce41436348acac45e3a4ba",
+                "reference": "cfb2b588bc7e7dd80fce41436348acac45e3a4ba",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +42,7 @@
                     "email": "bereczkybalazs1@gmail.com"
                 }
             ],
-            "time": "2018-08-31T16:18:41+00:00"
+            "time": "2018-08-31T20:58:38+00:00"
         },
         {
             "name": "curl/curl",
