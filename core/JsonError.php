@@ -18,7 +18,7 @@ class JsonError
         $this->execute();
     }
 
-    public function execute()
+    private function execute()
     {
         header('HTTP/1.0 ' . $this->code);
         header('Content-Type: application/json');
