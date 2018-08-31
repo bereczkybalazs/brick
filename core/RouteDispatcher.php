@@ -7,6 +7,7 @@ use Phroute\Phroute\Route;
 use Phroute\Phroute\RouteDataInterface;
 use Phroute\Phroute\Exception\HttpMethodNotAllowedException;
 use Phroute\Phroute\Exception\HttpRouteNotFoundException;
+use ReflectionMethod;
 
 class RouteDispatcher
 {
@@ -57,7 +58,11 @@ class RouteDispatcher
 
         $resolvedHandler = $this->handlerResolver->resolve($handler);
         $vars['request'] = $this->getRequest();
-        $response = call_user_func_array($resolvedHandler, $vars);
+        $reflection = new ReflectionMethod($resolvedHandler[0], $resolvedHandler[1]);
+        $response = call_user_func_array(
+            $resolvedHandler,
+            $this->getReflectionVars($reflection, $vars)
+        );
 
         return $this->dispatchFilters($afterFilter, $response);
     }
@@ -66,8 +71,28 @@ class RouteDispatcher
     {
         parse_str(file_get_contents('php://input'), $request);
         $request = array_merge_recursive($request, $_GET);
-        $response = new Request(toObject($request));
-        return $response;
+        return toObject($request);
+    }
+
+    private function getReflectionVars(ReflectionMethod $reflection, $vars)
+    {
+        $reflectionVariables = [];
+
+        foreach ($reflection->getParameters() as $key => $arg) {
+            $i = 0;
+            foreach ($vars as $var) {
+                if ($i == $key) {
+                    if (is_null($arg->getClass())) {
+                        $reflectionVariables[] = $var;
+                    } else {
+                        $reflectionClass = $arg->getClass()->name;
+                        $reflectionVariables[] = new $reflectionClass($var);
+                    }
+                }
+                $i++;
+            }
+        }
+        return $reflectionVariables;
     }
 
     /**
