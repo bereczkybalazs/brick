@@ -66,7 +66,8 @@ class RouteDispatcher
     {
         parse_str(file_get_contents('php://input'), $request);
         $request = array_merge_recursive($request, $_GET);
-        return toObject($request);
+        $response = new Request(toObject($request));
+        return $response;
     }
 
     /**
