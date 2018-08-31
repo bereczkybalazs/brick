@@ -1,5 +1,5 @@
 <?php
-namespace App\Core;
+namespace Core;
 
 use League\Di\Container;
 use Phroute\Phroute\RouteCollector;

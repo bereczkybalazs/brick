@@ -3,7 +3,7 @@
 namespace App\Repositories;
 
 use App\Contracts\Repositories\TestRepositoryInterface;
-use App\Core\BaseRepository;
+use Core\BaseRepository;
 
 class TestRepository extends BaseRepository implements TestRepositoryInterface
 {

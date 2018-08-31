@@ -1,3 +1,3 @@
 <?php
 
-$app->router->any('/', ['App\\Controllers\\TestController', 'index']);
+$app->router->get('/', ['App\\Controllers\\TestController', 'index']);

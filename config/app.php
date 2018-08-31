@@ -2,12 +2,13 @@
 
 require_once(__DIR__ . DIRECTORY_SEPARATOR .'helpers.php');
 
+require_all(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'core');
 require_all(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'app');
 
-use App\Core\App;
+use Core\App;
 use Phroute\Phroute\RouteCollector;
-use App\Core\RouterResolver;
-use App\Core\InterfaceBinder;
+use Core\RouterResolver;
+use Core\InterfaceBinder;
 use League\Di\Container;
 use Symfony\Component\Dotenv\Dotenv;
 
