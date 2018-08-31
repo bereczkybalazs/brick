@@ -1,5 +1,16 @@
 {
+    "name": "bereczkybalazs/brick",
+    "type": "project",
+    "version": "0.0.1",
     "require": {
         "bereczkybalazs/brick-core": "^0.0.1"
-    }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bereczky Balazs",
+            "email": "bereczkybalazs1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
 }

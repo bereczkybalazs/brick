@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dc5b9be0537c21500191824819ac349",
+    "content-hash": "54bc2eef5fe69e75de49df1e1e2efcfd",
     "packages": [
         {
             "name": "bereczkybalazs/brick-core",
@@ -46,16 +46,16 @@
         },
         {
             "name": "league/di",
-            "version": "1.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/di.git",
-                "reference": "ad0259589949f12abeae6c1e918a0ff7ef00b00a"
+                "reference": "005f741a52c61c607322225d9eb1fef3e0e9540a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/di/zipball/ad0259589949f12abeae6c1e918a0ff7ef00b00a",
-                "reference": "ad0259589949f12abeae6c1e918a0ff7ef00b00a",
+                "url": "https://api.github.com/repos/thephpleague/di/zipball/005f741a52c61c607322225d9eb1fef3e0e9540a",
+                "reference": "005f741a52c61c607322225d9eb1fef3e0e9540a",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
                 "ioc"
             ],
             "abandoned": "orno/di",
-            "time": "2013-08-04T22:55:53+00:00"
+            "time": "2013-07-27T11:59:24+00:00"
         },
         {
             "name": "phroute/phroute",
@@ -189,7 +189,7 @@
         },
         {
             "name": "respect/validation",
-            "version": "1.0.20",
+            "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Respect/Validation.git",
@@ -252,7 +252,7 @@
         },
         {
             "name": "symfony/dotenv",
-            "version": "v3.4.15",
+            "version": "3.4.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dotenv.git",
@@ -309,7 +309,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.9.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -369,7 +369,7 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
