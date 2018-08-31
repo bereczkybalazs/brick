@@ -3,7 +3,8 @@
     "type": "project",
     "version": "0.0.3",
     "require": {
-        "bereczkybalazs/brick-core": "^0.0.2"
+        "bereczkybalazs/brick-core": "^0.1.0",
+        "curl/curl": "dev-master"
     },
     "license": "MIT",
     "authors": [
