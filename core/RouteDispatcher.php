@@ -12,10 +12,10 @@ use ReflectionMethod;
 class RouteDispatcher
 {
 
-    private $staticRouteMap;
-    private $variableRouteData;
-    private $filters;
-    private $handlerResolver;
+    protected $staticRouteMap;
+    protected $variableRouteData;
+    protected $filters;
+    protected $handlerResolver;
     public $matchedRoute;
 
     /**
@@ -69,14 +69,14 @@ class RouteDispatcher
         return $this->dispatchFilters($afterFilter, $response);
     }
 
-    private function getRequest()
+    protected function getRequest()
     {
         parse_str(file_get_contents('php://input'), $request);
         $request = array_merge_recursive($request, $_GET);
         return toObject($request);
     }
 
-    private function validateRequest($reflectionVariables)
+    protected function validateRequest($reflectionVariables)
     {
         foreach ($reflectionVariables as $reflectionVariable) {
             if ($reflectionVariable instanceof Request) {
@@ -85,7 +85,7 @@ class RouteDispatcher
         }
     }
 
-    private function getReflectionVars(ReflectionMethod $reflection, $vars)
+    protected function getReflectionVars(ReflectionMethod $reflection, $vars)
     {
         $reflectionVariables = [];
 
@@ -113,7 +113,7 @@ class RouteDispatcher
      * @param null $response
      * @return mixed|null
      */
-    private function dispatchFilters($filters, $response = null)
+    protected function dispatchFilters($filters, $response = null)
     {
         while ($filter = array_shift($filters)) {
             $handler = $this->handlerResolver->resolve($filter);
@@ -132,7 +132,7 @@ class RouteDispatcher
      * @param $filters
      * @return array
      */
-    private function parseFilters($filters)
+    protected function parseFilters($filters)
     {
         $beforeFilter = array();
         $afterFilter = array();
@@ -155,7 +155,7 @@ class RouteDispatcher
      * @param $uri
      * @throws HttpRouteNotFoundException
      */
-    private function dispatchRoute($httpMethod, $uri)
+    protected function dispatchRoute($httpMethod, $uri)
     {
         if (isset($this->staticRouteMap[$uri])) {
             return $this->dispatchStaticRoute($httpMethod, $uri);
@@ -172,7 +172,7 @@ class RouteDispatcher
      * @return mixed
      * @throws HttpMethodNotAllowedException
      */
-    private function dispatchStaticRoute($httpMethod, $uri)
+    protected function dispatchStaticRoute($httpMethod, $uri)
     {
         $routes = $this->staticRouteMap[$uri];
 
@@ -190,7 +190,7 @@ class RouteDispatcher
      * @param $httpMethod
      * @throws HttpMethodNotAllowedException
      */
-    private function checkFallbacks($routes, $httpMethod)
+    protected function checkFallbacks($routes, $httpMethod)
     {
         $additional = array(Route::ANY);
 
@@ -217,7 +217,7 @@ class RouteDispatcher
      * @throws HttpMethodNotAllowedException
      * @throws HttpRouteNotFoundException
      */
-    private function dispatchVariableRoute($httpMethod, $uri)
+    protected function dispatchVariableRoute($httpMethod, $uri)
     {
         foreach ($this->variableRouteData as $data) {
             if (!preg_match($data['regex'], $uri, $matches)) {
