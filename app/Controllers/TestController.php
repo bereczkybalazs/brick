@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Contracts\Handlers\TestHandlerInterface;
-use Core\Request;
+use BereczkyBalazs\BrickCore\Request;
 
 class TestController
 {

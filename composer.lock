@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ec538a89137f0b72d86ce3864ef65e0",
+    "content-hash": "5dc5b9be0537c21500191824819ac349",
     "packages": [
+        {
+            "name": "bereczkybalazs/brick-core",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bereczkybalazs/BrickCore.git",
+                "reference": "8cc307b348176058eda13bee75141316c6c5e61f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bereczkybalazs/BrickCore/zipball/8cc307b348176058eda13bee75141316c6c5e61f",
+                "reference": "8cc307b348176058eda13bee75141316c6c5e61f",
+                "shasum": ""
+            },
+            "require": {
+                "league/di": ">=1.1",
+                "phroute/phroute": "^2.1",
+                "progsmile/request-validator": "^1.1",
+                "symfony/dotenv": "^3.3"
+            },
+            "type": "package",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bereczky Balazs",
+                    "email": "bereczkybalazs1@gmail.com"
+                }
+            ],
+            "time": "2018-08-31T12:42:14+00:00"
+        },
         {
             "name": "league/di",
             "version": "1.2.0",

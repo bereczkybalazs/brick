@@ -1,8 +1,5 @@
 {
     "require": {
-        "phroute/phroute": "^2.1",
-        "league/di": ">=1.1",
-        "symfony/dotenv": "^3.3",
-        "progsmile/request-validator": "^1.1"
+        "bereczkybalazs/brick-core": "^0.0.1"
     }
 }

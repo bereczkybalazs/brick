@@ -5,10 +5,11 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR .'helpers.php');
 require_all(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'core');
 require_all(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'app');
 
-use Core\App;
+use BereczkyBalazs\BrickCore\App;
 use Phroute\Phroute\RouteCollector;
-use Core\RouterResolver;
-use Core\InterfaceBinder;
+use BereczkyBalazs\BrickCore\RouterResolver;
+use BereczkyBalazs\BrickCore\InterfaceBinder;
+use BereczkyBalazs\BrickCore\RouteDispatcher;
 use League\Di\Container;
 use Symfony\Component\Dotenv\Dotenv;
 
@@ -25,7 +26,7 @@ require_once(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'route
 
 $app->bindInterfaces();
 $resolver = new RouterResolver($app->container);
-$dispatcher = new \Core\RouteDispatcher($app->router->getData(), $resolver);
+$dispatcher = new RouteDispatcher($app->router->getData(), $resolver);
 
 $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
