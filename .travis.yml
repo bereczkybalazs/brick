@@ -8,5 +8,8 @@ install:
 before_script:
     - ls -al
 
+script:
+  - ./vendor/bin/phpunit
+
 branches:
   only: master
