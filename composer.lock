@@ -8,20 +8,21 @@
     "packages": [
         {
             "name": "bereczkybalazs/brick-core",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bereczkybalazs/brick-core.git",
-                "reference": "dfa72c84d757c641ce78830c65b19889c0c17575"
+                "reference": "992172fbf200d2b08b7b656bcb9c3088c5225269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/dfa72c84d757c641ce78830c65b19889c0c17575",
-                "reference": "dfa72c84d757c641ce78830c65b19889c0c17575",
+                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/992172fbf200d2b08b7b656bcb9c3088c5225269",
+                "reference": "992172fbf200d2b08b7b656bcb9c3088c5225269",
                 "shasum": ""
             },
             "require": {
                 "curl/curl": "^1.5",
+                "firebase/php-jwt": "^5.0",
                 "league/di": ">=1.1",
                 "php": ">=5.6.4",
                 "phroute/phroute": "^2.1",
@@ -29,7 +30,12 @@
                 "symfony/dotenv": "^3.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "~5.7"
+                "doctrine/instantiator": "1.0.5",
+                "myclabs/deep-copy": "1.7.0",
+                "phpdocumentor/reflection-docblock": "3.3.2",
+                "phpunit/php-token-stream": "1.4.11",
+                "phpunit/phpunit": "~5.7",
+                "symfony/yaml": "3.4.*"
             },
             "type": "package",
             "autoload": {
@@ -47,7 +53,7 @@
                     "email": "bereczkybalazs1@gmail.com"
                 }
             ],
-            "time": "2018-09-01T12:00:07+00:00"
+            "time": "2018-09-01T17:32:51+00:00"
         },
         {
             "name": "curl/curl",
@@ -103,6 +109,52 @@
                 "dot"
             ],
             "time": "2018-08-18T15:32:01+00:00"
+        },
+        {
+            "name": "firebase/php-jwt",
+            "version": "v5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+                "reference": "9984a4d3a32ae7673d6971ea00bae9d0a1abba0e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": " 4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "time": "2017-06-27T22:17:23+00:00"
         },
         {
             "name": "league/di",
