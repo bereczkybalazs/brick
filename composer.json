@@ -1,7 +1,7 @@
 {
     "name": "bereczkybalazs/brick",
     "type": "project",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "require": {
         "bereczkybalazs/brick-core": "0.1.*",
         "curl/curl": "^1.5"
@@ -12,6 +12,5 @@
             "name": "Bereczky Balazs",
             "email": "bereczkybalazs1@gmail.com"
         }
-    ],
-    "minimum-stability": "dev"
+    ]
 }
