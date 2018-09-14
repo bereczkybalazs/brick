@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "75616b6ff908ccc4b1b6423ca87eeb7c",
+    "content-hash": "8d00de7aaada529ab147f67abb93cd55",
     "packages": [
         {
             "name": "bereczkybalazs/brick-core",
-            "version": "0.1.17",
+            "version": "0.1.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bereczkybalazs/brick-core.git",
-                "reference": "c080fbf58f7fdac5e61ff9a2ba637c58e9df5440"
+                "reference": "450e35a064f66cc3b399046a20f07b182d091027"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/c080fbf58f7fdac5e61ff9a2ba637c58e9df5440",
-                "reference": "c080fbf58f7fdac5e61ff9a2ba637c58e9df5440",
+                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/450e35a064f66cc3b399046a20f07b182d091027",
+                "reference": "450e35a064f66cc3b399046a20f07b182d091027",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                     "email": "bereczkybalazs1@gmail.com"
                 }
             ],
-            "time": "2018-09-14T18:15:24+00:00"
+            "time": "2018-09-14T20:10:08+00:00"
         },
         {
             "name": "curl/curl",
