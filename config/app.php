@@ -11,6 +11,9 @@ use BereczkyBalazs\BrickCore\InterfaceBinder;
 use BereczkyBalazs\BrickCore\RouteDispatcher;
 use League\Di\Container;
 use Symfony\Component\Dotenv\Dotenv;
+use BereczkyBalazs\BrickCore\ExceptionHandler;
+
+new ExceptionHandler();
 
 $app = new App(
     new RouteCollector(),

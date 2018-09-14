@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e4df2bd17d0d248d0f340af1dc502529",
+    "content-hash": "75616b6ff908ccc4b1b6423ca87eeb7c",
     "packages": [
         {
             "name": "bereczkybalazs/brick-core",
-            "version": "0.1.16",
+            "version": "0.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bereczkybalazs/brick-core.git",
-                "reference": "8de241c14fbcb081e1d3458df4d3b9ed047887fa"
+                "reference": "c080fbf58f7fdac5e61ff9a2ba637c58e9df5440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/8de241c14fbcb081e1d3458df4d3b9ed047887fa",
-                "reference": "8de241c14fbcb081e1d3458df4d3b9ed047887fa",
+                "url": "https://api.github.com/repos/bereczkybalazs/brick-core/zipball/c080fbf58f7fdac5e61ff9a2ba637c58e9df5440",
+                "reference": "c080fbf58f7fdac5e61ff9a2ba637c58e9df5440",
                 "shasum": ""
             },
             "require": {
@@ -53,20 +53,20 @@
                     "email": "bereczkybalazs1@gmail.com"
                 }
             ],
-            "time": "2018-09-02T22:42:07+00:00"
+            "time": "2018-09-14T18:15:24+00:00"
         },
         {
             "name": "curl/curl",
-            "version": "1.9.2",
+            "version": "1.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-mod/curl.git",
-                "reference": "8fa349f9f82f8d892137fe87239a70b0d358d160"
+                "reference": "43436a604b18c2a985cbc3f983be817fbe500e99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-mod/curl/zipball/8fa349f9f82f8d892137fe87239a70b0d358d160",
-                "reference": "8fa349f9f82f8d892137fe87239a70b0d358d160",
+                "url": "https://api.github.com/repos/php-mod/curl/zipball/43436a604b18c2a985cbc3f983be817fbe500e99",
+                "reference": "43436a604b18c2a985cbc3f983be817fbe500e99",
                 "shasum": ""
             },
             "require": {
@@ -108,7 +108,7 @@
                 "curl",
                 "dot"
             ],
-            "time": "2018-08-18T15:32:01+00:00"
+            "time": "2018-09-05T17:16:47+00:00"
         },
         {
             "name": "firebase/php-jwt",
