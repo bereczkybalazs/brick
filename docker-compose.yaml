@@ -23,14 +23,3 @@ mysql:
     - "3306:3306"
   environment:
     - MYSQL_ROOT_PASSWORD=password
-
-phpmyadmin:
-  image: phpmyadmin/phpmyadmin
-  links:
-    - mysql:db
-  ports:
-    - "8082:80"
-  environment:
-    - PMA_USER=root
-    - PMA_PASSWORD=
-    - PHP_UPLOAD_MAX_FILESIZE=100MB
