@@ -12,8 +12,10 @@ use BereczkyBalazs\BrickCore\RouteDispatcher;
 use League\Di\Container;
 use Symfony\Component\Dotenv\Dotenv;
 use BereczkyBalazs\BrickCore\ExceptionHandler;
+use BereczkyBalazs\BrickCore\Header;
 
-new ExceptionHandler();
+$header = new Header();
+new ExceptionHandler($header);
 
 $app = new App(
     new RouteCollector(),
@@ -32,6 +34,7 @@ $dispatcher = new RouteDispatcher($app->router->getData(), $resolver);
 
 $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
-header("Access-Control-Allow-Origin: *");
-header('Content-Type: application/json');
+$header->add('Access-Control-Allow-Origin', '*');
+$header->add('Content-Type', 'application/json');
+$header->build();
 echo json_encode($response);
